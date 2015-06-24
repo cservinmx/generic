@@ -7,15 +7,12 @@
 class Conexion{
 	
     private static $instancia;
-    private $db;
-	/*private $bd_host='host';
-	private $bd_user='user';
-	private $bd_password='pass';
-	private $bd_data_base='db_name';*/
+    private $dbh;
+	
 	private $bd_host='localhost';
 	private $bd_user='root';
 	private $bd_password='root';
-	private $bd_data_base='ps_prosa';
+	private $bd_data_base='test';
 	
     private function __construct(){
         try {
@@ -23,9 +20,9 @@ class Conexion{
 			$bd_user=$this->bd_user;
 			$bd_password=$this->bd_password;
 			$bd_data_base=$this->bd_data_base;
-			$this->db = new PDO('mysql:host=localhost;dbname=ps_prosa', 'root', 'root');
- 			//$this->db = new PDO("mysql:host=$bd_host;dbname=$bd_data_base, $bd_user, $bd_password");            
-            $this->db->exec("SET CHARACTER SET utf8");
+			$this->dbh = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+ 			   
+            $this->dbh->exec("SET CHARACTER SET utf8");
  
         } catch (PDOException $e) {
  
@@ -37,11 +34,11 @@ class Conexion{
  
     public function prepare($sql){
  
-        return $this->db->prepare($sql);
+        return $this->dbh->prepare($sql);
  
     }
 	function get_last_id(){  
-		return $this->db->lastInsertId();
+		return $this->dbh->lastInsertId();
 	} 
 	
     public static function singleton_conexion(){
