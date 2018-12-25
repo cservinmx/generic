@@ -1,6 +1,7 @@
 <!--/*
-* @Credit: 		Carlos Servin 2015 
+* @Credit: 		Carlos Servin 2015
 * @copyright	Copyright (C) 2015 Carlos Servin. http://www.servin.mx
+* Prueba edicion
 */-->
 
 <script src="js/scripts.js"></script>
@@ -9,7 +10,7 @@
 Ejercicio 1<br>
 Inserta el RFC, para persona Fisica.
 <input name="rfc" type="text" class="txtbox" id="rfc" size="24" style="text-transform: uppercase" />
-<input type="button" id="val" name="val" value="Valida" onclick="Valida_RFC()">  
+<input type="button" id="val" name="val" value="Valida" onclick="Valida_RFC()">
 <br>
 Ejercicio 3<br>
 Busca una palabra
@@ -17,5 +18,3 @@ Busca una palabra
 <br>
 Posibles resultados: <br>
 <div id="resultado"></div>
-
-
