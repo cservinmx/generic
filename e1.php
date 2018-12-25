@@ -1,7 +1,7 @@
 <!--/*
 * @Credit: 		Carlos Servin 2015
 * @copyright	Copyright (C) 2015 Carlos Servin. http://www.servin.mx
-* Prueba edicion
+* Prueba edicion dic 2018
 */-->
 
 <script src="js/scripts.js"></script>
